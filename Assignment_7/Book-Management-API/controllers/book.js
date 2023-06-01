@@ -18,10 +18,10 @@ exports.getBookById = async (req, res) => {
         if (book) {
             res.json(book);
         } else {
-            res.status(404).json({ error: 'Book not found' });
+            res.status(404).json({ error: 'Book Not Found' });
         }
     } catch (error) {
-        res.status(500).json({ error: 'Failed to retrieve book' });
+        res.status(500).json({ error: 'Failed To Retrieve Book' });
     }
 };
 
@@ -32,7 +32,7 @@ exports.createBook = async (req, res) => {
         const book = await Book.create({ title, author, description, publishedYear });
         res.status(201).json(book);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to create book' });
+        res.status(500).json({ error: 'Failed To Create Book' });
     }
 };
 
@@ -49,10 +49,10 @@ exports.updateBook = async (req, res) => {
       if (book) {
         res.json(book);
       } else {
-        res.status(404).json({ error: 'Book not found' });
+        res.status(404).json({ error: 'Book Not Found' });
       }
     } catch (error) {
-      res.status(500).json({ error: 'Failed to update book' });
+      res.status(500).json({ error: 'Failed To Update Book' });
     }
   };
 
@@ -62,11 +62,11 @@ exports.deleteBook = async (req, res) => {
     try {
       const book = await Book.findByIdAndDelete(id);
       if (book) {
-        res.json({ message: 'Book deleted successfully' });
+        res.json({ message: 'Book Deleted Successfully' });
       } else {
-        res.status(404).json({ error: 'Book not found' });
+        res.status(404).json({ error: 'Book Not Found' });
       }
     } catch (error) {
-      res.status(500).json({ error: 'Failed to delete book' });
+      res.status(500).json({ error: 'Failed To Delete Book' });
     }
   };

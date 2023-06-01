@@ -5,7 +5,7 @@ const cors=require('cors')
 const morgan=require('morgan')
 const mongoose=require('mongoose');
 require("dotenv").config();
-const bookRoutes=require('./routes/bookRoutes')
+const bookRoutes=require('./routes/book')
 const port = process.env.PORT;
 
 app.use(cors());
