@@ -1,0 +1,70 @@
+@font-face {
+        font-family: 'Poppins' sans-serif;
+        src: url('fonts/Poppins-Regular.ttf')
+        format('truetype');
+      }
+
+
+
+
+:root {
+        --main-font: 'Poppins' sans-serif;
+        --heading-color: #191919;
+        --container-bg-color: #f9d0dc;
+        --table-bg-color: #c4bebe;
+        --table-cell-border-color: #ccc;
+        --hovered-row-bg-color: #ddd;
+     }
+
+
+
+  body {
+    font-family: var(--main-font);
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    background-color: var(--container-bg-color);
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    align-items: center;
+    padding: 50px;
+  }
+
+  h1 {
+    color: var(--heading-color);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  ul li:first-child {
+    font-weight: bold;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  table {
+    background-color: var(--table-bg-color);
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--table-cell-border-color);
+  }
+
+  thead {
+    background-color:rgb(131, 126, 136)
+  }
+
+  td, th {
+    border: 1px solid var(--table-cell-border-color);
+    padding: 8px;
+  }
+
+  tbody tr:hover {
+    background-color: var(--hovered-row-bg-color);
+  }
