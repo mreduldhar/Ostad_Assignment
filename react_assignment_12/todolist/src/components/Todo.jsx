@@ -5,6 +5,7 @@ const Todo = () => {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewtask] = useState("");
     const [completedTasks, setCompletedTasks] = useState([]);
+    
 
     const AddToTask = (e) => {
         e.preventDefault();
@@ -27,6 +28,7 @@ const Todo = () => {
         tasks.splice(index, 1)
         setTasks([...tasks]);
     }
+
     return (
         <div className='container-fluid my-4'>
            <div className="row justify-content-center">
@@ -66,8 +68,8 @@ const Todo = () => {
                                                 return(
                                                     <tr key={index.toString()}>
                                                         <td>{element}</td>
-                                                        <td><button className='btn btn-success' onClick={() =>CompleteTask(index)}>Complete</button></td>
-                                                        <td><button className='btn btn-danger'  onClick={()=>{RemoveTask(index)}}>Remove</button></td>
+                                                        <td className='text-center'><button className='btn btn-success' onClick={() =>CompleteTask(index)}>Complete</button></td>
+                                                        <td className='text-center'><button className='btn btn-danger'  onClick={()=>{RemoveTask(index)}}>Remove</button></td>
                                                     </tr>
                                                 )
                                             })
