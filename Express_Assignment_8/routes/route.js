@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const {createProduct, getProducts} = require('../controller/controller');
+const {createProduct, getProducts} = require('../controllers/controller');
 
 const {authenticate} = require('../middleware/tokenVerify');
 
