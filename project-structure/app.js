@@ -35,11 +35,11 @@ app.use(express.urlencoded({extended: true}));
 
 // Database Connection
 
-// mongoose.connect(process.env.DB_URL).then(()=>{
-//     console.log("Database Connected 😊",)
-// }).catch((err)=>{
-//     console.log("Database not Connected 😖")
-// })
+mongoose.connect(process.env.DB_URL).then(()=>{
+    console.log("Database Connected 😊",)
+}).catch((err)=>{
+    console.log("Database not Connected 😖")
+})
 
 
 
